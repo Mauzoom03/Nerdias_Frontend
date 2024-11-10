@@ -6,6 +6,8 @@ $blue--3: #9EE1F5;
 $blue--4: #BFEBF8;
 $blue--5: #DFF5FC;
 $blue--6: #EFFAFD;
+$BaseColor: #8C44FD;
+$Basebackground:#Fcfcfc;
 // gold
 $gold--1: #EDC418;
 // purple
@@ -61,5 +63,15 @@ $columngap-medium: 20px;
 $navbar-height: 190px;
 $navbar-height--mobile: 90px;
 
+// **** Fonts ****
+$default-font-family: 'Krub', sans-serif;
 
+
+// **** Product Slider ****
+$slider-background: #f9f9f9;
+$slider-border: #e0e0e0;
+$slider-item-background: #ffffff;
+$slider-item-shadow: rgba(0, 0, 0, 0.1);
+$slider-title-color: #333;
+$slider-image-max-width: 100%;
 

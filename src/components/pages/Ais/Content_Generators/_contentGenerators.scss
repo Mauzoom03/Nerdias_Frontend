@@ -1,0 +1,114 @@
+@import "../../../../assets/scss/scss_parts/abstracts/variables";
+
+h1.title {
+  color: $BaseColor;
+  text-align: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.slider-container {
+  margin: 20px 0;
+  
+
+  .slider-title {
+    color: $slider-title-color;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    background: $slider-background;
+    border: 1px solid $slider-border;
+    border-radius: 5px;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $slider-border;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
+  .content-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+    position: relative;
+    background: $slider-item-background;
+    border: 1px solid $slider-border;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px $slider-item-shadow;
+    overflow: hidden;
+
+    .slider-card {
+      position: relative;
+      height: 150px;
+
+      .slider-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 0 0 5px 5px;
+
+      .try-now-button {
+        background-color: $BaseColor;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($BaseColor, 20%);
+        }
+      }
+
+      .bookmark-icon {
+        font-size: 18px;
+        cursor: pointer;
+        color: $slider-border;
+        transition: color 0.3s ease;
+
+        &.bookmarked {
+          color: $BaseColor;
+        }
+
+        &:hover {
+          color: lighten($BaseColor, 10%);
+        }
+      }
+
+      .info-icon {
+        cursor: pointer; // Cambia el cursor para indicar que es interactivo
+        transition: color 0.3s ease; // Transición suave para el efecto de hover
+
+        &:hover {
+          color: #007bff; // Cambia a un color más visible al pasar el mouse
+        }
+    }
+  }
+}
+}

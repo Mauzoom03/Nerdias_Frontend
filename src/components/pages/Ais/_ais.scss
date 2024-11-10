@@ -1,0 +1,60 @@
+@import "../../../assets/scss/scss_parts/abstracts/variables";
+
+.ais-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: calc(100vh - 100px); // Ajustar el alto mínimo según el encabezado
+  position: relative;
+  background-color: $Basebackground;
+
+  .card {
+    position: relative;
+    max-width: 200px; // Limitar el ancho máximo
+    width: 200px;
+    height: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    background-color: $BaseColor;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &:hover .card-link {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .card-title {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: black;
+      background: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      text-align: center;
+    }
+
+    .card-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.3s ease;
+      opacity: 0.5;
+      z-index: 1;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

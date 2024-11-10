@@ -1,0 +1,63 @@
+@import "../../../assets/scss/scss_parts/abstracts/variables";
+
+div.slider-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  background-color: $Basebackground;
+  padding: 20px; // Padding para el contenedor general
+  border-radius: 10px; // Bordes redondeados
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Sombra para dar profundidad
+
+  > div.slider-track {
+    display: flex;
+    width:auto;
+    animation: slide 50s linear infinite; // Animación para la fila normal
+    gap: 10px; // Espacio entre elementos
+
+    > div.course-item {
+      flex: 0 0 200px;
+      cursor: pointer;
+      text-align: center;
+      padding: 10px; // Padding interno para los elementos del curso
+      background-color: rgba(255, 255, 255, 0.8); // Fondo semi-transparente para el curso
+      border-radius: 10px; // Bordes redondeados
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15); // Sombra sutil
+
+      > img {
+        width: 100%;
+        height: 100px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05); // Escalado más sutil en hover
+        }
+      }
+
+      &.visible {
+        opacity: 1;
+      }
+
+      > p {
+        font-size: medium;
+        font-weight: lighter;
+        margin-top: 5px; // Espacio superior para el texto
+        color: #333; // Color de texto más oscuro para mejor legibilidad
+      }
+    }
+  }
+}
+
+/* Animación para deslizar la fila completa */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); // Mueve el 50% del track para reiniciar
+  }
+}
+

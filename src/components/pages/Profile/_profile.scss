@@ -1,0 +1,107 @@
+@import "../../../assets/scss/scss_parts/abstracts/variables";
+
+  .profile-container{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: $Basebackground;
+  justify-content: center;
+  align-items: center;
+
+  div.profile-content-container {    
+  display: flex;
+  flex-direction: column;   
+  width: 50%;
+  max-width: 600px;
+  height: 50vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  }
+
+.profile-id-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+img.profile-id-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Información del perfil */
+.profile-info h3,
+.profile-info h4 {
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+.profile-id-username {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.profile-id-name {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.profile-id-email {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Estilos para el formulario de edición */
+.edit-profile-form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.input-area {
+  margin: 15px 0;
+}
+
+.input-area label {
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-area input[type="text"],
+.input-area input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.edit-profile-form-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.form-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #555;
+}

@@ -1,56 +1,15 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
+@import "../abstracts//variables";
 
-html{
-    scroll-behavior: smooth;
-}
 
-body{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    
-    &.modal-open{
-        overflow: hidden;
-    }
-}
+body {
+  background-color: $Basebackground; // Color de fondo basado en variable
+  font-family: $default-font-family; // Fuente basada en variable
+  overflow-x: hidden; // Evita desplazamiento horizontal
+  
 
-main{
-    display: block;
-}
+  &.modal-open {
+    overflow: hidden; // Evita el desplazamiento cuando el modal está abierto
+  }
 
-section{
-    display: block;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-.container{
-    display: block;
-    max-width: $grid-container !important;
-    margin: 0 auto;
-    width: 95%;
-    padding: 0; 
-    
-    @include mq($breakpoints-mq--480) {
-        width: 90%;
-    }
-}
-
-.container-fluid {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-}
-
-.row{
-   display: flex;
-   flex-flow: row wrap;
-   max-width: 100%;
-   width: 100%;
+  cursor: default; // Asegura que el cursor sea el predeterminado
 }
